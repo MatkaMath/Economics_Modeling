@@ -1,9 +1,3 @@
-# Solow Growth Model Simulation with Steady-State Comparison
-# This Python project models economic growth using the Solow-Swan framework.
-# It simulates capital accumulation, labor growth, and technological progress over time.
-# The model includes policy interventions affecting savings rates and economic shocks impacting technology.
-# Steady-state values are calculated and plotted for comparison.
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -33,7 +27,7 @@ K[0] = K0
 L[0] = L0
 A[0] = A0
 
-# Compute steady-state values before simulation
+# Compute steady-state values
 K_ss = (s * A0 / (delta + n + g))**(1 / (1 - alpha))
 Y_ss = A0 * (K_ss**alpha) * (L0**(1 - alpha))
 C_ss = (1 - s) * Y_ss
@@ -56,7 +50,7 @@ def solow_growth(T, alpha, delta, s, s_new, n, g, K, L, A, policy_intervention, 
 
 K, Y, L, A = solow_growth(T, alpha, delta, s, s_new, n, g, K, L, A, policy_intervention, shock_period, shock_magnitude)
 
-# Compute Consumption dynamically based on the correct savings rate
+# Compute Consumption
 C = np.zeros(T)
 for t in range(T):
     current_s = s_new if t >= policy_intervention else s  # Use correct savings rate
