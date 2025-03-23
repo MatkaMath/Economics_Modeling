@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# macOS
+.DS_Store
+
+# dotenv file (ako koristiš)
+.env
+
+# Logs and misc
+*.log
+*.sqlite3
+*.db
+
+# Package distributions
+dist/
+build/
+*.egg-info/
+
+# Test / coverage
+htmlcov/
+.tox/
+.coverage
+.cache/
